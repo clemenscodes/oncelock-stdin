@@ -1,0 +1,11 @@
+[package]
+name = "workspace"
+description = "workspace-hack package, managed by hakari"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+publish = false
+
+### BEGIN HAKARI SECTION
+### END HAKARI SECTION

@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = ["crates/*", "crates/workspace"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["Clemens Horn <me@clemenshorn.com>"]
+
+[workspace.metadata.crane]
+name = "nix-rust-template"
+
+[workspace.dependencies]
+workspace = { path = "./crates/workspace" }
+stub = { path = "./crates/stub" }

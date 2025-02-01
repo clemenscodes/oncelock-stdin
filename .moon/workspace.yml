@@ -1,0 +1,41 @@
+# https://moonrepo.dev/docs/config/workspace
+$schema: "https://moonrepo.dev/schemas/workspace.json"
+
+versionConstraint: ">=1.27.0"
+
+telemetry: false
+
+projects:
+  - "moon.yml"
+  - "**/*/moon.yml"
+
+vcs:
+  manager: "git"
+  provider: "github"
+  defaultBranch: "main"
+  syncHooks: true
+  remoteCandidates:
+    - "origin"
+    - "upstream"
+
+codeowners:
+  orderBy: "project-name"
+  syncOnRun: true
+
+constraints:
+  enforceProjectTypeRelationships: true
+
+experiments:
+  strictProjectAliases: true
+
+hasher:
+  batchSize: 2500
+  warnOnMissingInputs: true
+  optimization: "performance"
+  walkStrategy: "vcs"
+
+runner:
+  autoCleanCache: true
+  inheritColorsForPipedTasks: true
+  logRunningCommand: true
+  cacheLifetime: "24 hours"

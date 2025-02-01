@@ -1,0 +1,9 @@
+.moon/cache
+.moon/docker
+**/.direnv
+**/target
+**/dist
+**/result
+**/node_modules
+**/vendor
+**/.env

@@ -1,0 +1,19 @@
+# https://moonrepo.dev/docs/config/project
+$schema: "https://moonrepo.dev/schemas/project.json"
+id: "stub"
+project:
+  name: "stub"
+  description: "stub binary"
+tags:
+  - "binary"
+type: "application"
+language: "rust"
+platform: "rust"
+workspace:
+  inheritedTasks:
+    exclude: ["dev"]
+tasks:
+  dev:
+    command: "cargo watch -w src -x build"
+  exec:
+    command: "cargo run"

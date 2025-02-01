@@ -1,0 +1,22 @@
+# https://moonrepo.dev/docs/config/project
+$schema: "https://moonrepo.dev/schemas/project.json"
+id: "root"
+project:
+  name: "root"
+  description: "root of workspace"
+type: "application"
+language: "rust"
+platform: "system"
+workspace:
+  inheritedTasks:
+    exclude: ["dev", "taplo"]
+tasks:
+  dev:
+    command: "noop"
+    deps:
+      - "stub:dev"
+    local: true
+  taplo:
+    command: "taplo fmt *.toml && taplo fmt crates/**/*.toml"
+    options:
+      cache: false
